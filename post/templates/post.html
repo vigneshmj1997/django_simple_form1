@@ -1,0 +1,19 @@
+<html>
+<body>
+{%if demo%}
+<p>no data</p>
+{%endif%}
+<ul>
+{%for i in demo%}
+<h4>{{i.author}}</h4>
+<p>{{i.title}}</p>
+<p>{{i.text}}</p>
+<p>{{i.created_date}}</p>
+<p>{{i.published_date}}</p>
+{{form1.as_p}}
+{%endfor%}
+</ul>
+</body>
+</html>
+<button><a href="{% url 'upload' %}">click Here</a></button>
+<button><a href="{% url 'del' %}">click Here</a></button>
